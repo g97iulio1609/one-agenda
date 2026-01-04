@@ -1,0 +1,48 @@
+{
+  "name": "@onecoach/one-agenda",
+  "version": "0.1.0",
+  "description": "Motore di pianificazione proattiva OneAgenda per onecoach",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "echo 'Skipping one-agenda build for web deployment'",
+    "build:full": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ai": "6.0.5",
+    "commander": "^14.0.2",
+    "date-fns": "^4.1.0",
+    "lodash-es": "^4.17.22",
+    "node-ical": "^0.22.1",
+    "uuid": "^13.0.0",
+    "zod": "4.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@types/uuid": "^11.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "bin": {
+    "oneagenda": "bin/oneagenda.mjs"
+  },
+  "sideEffects": false
+}
