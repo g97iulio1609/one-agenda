@@ -6,10 +6,7 @@
  */
 
 // Import from lib package (workspace dependency)
-import { createAgent, type AgentConfig } from '@onecoach/lib-ai-agents';
-import { createModel } from '@onecoach/lib-ai';
-import { getModelByTier } from '@onecoach/lib-ai';
-import type { ModelTier } from '@onecoach/lib-ai';
+import { createAgent, type AgentConfig, getModelByTier, ModelTier } from '@onecoach/lib-ai';
 import { Output, ToolLoopAgent, stepCountIs, tool } from 'ai';
 
 import { z } from 'zod';
